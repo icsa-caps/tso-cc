@@ -1,0 +1,18 @@
+This is a Murpi model of the TSO-CC lazy cache coherence protocol and the TSO-LB
+operational approximation of the TSO memory model.
+
+(Copyright Christopher J. Banks and Marco Elver, University of Edinburgh.)
+
+Running the model in Murphi verifies that TSO-CC adheres to the TSO-LB memory
+model, for a fixed cache size, but for an unbounded number of processors.
+
+To compile the model cmurphi version 5.4.9 is required. (Other Murphi versions
+may work, but are untested by the authors.)
+
+To compile and run, first set the MURPHIPATH variable in the Makefile, then run
+
+$ make
+$ TSO-CC -tv -m13000
+
+Note that at least 13GB of RAM will be required to run the model with its
+default settings.
